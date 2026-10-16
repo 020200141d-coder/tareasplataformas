@@ -1,0 +1,17 @@
+# AGREGADO (Guía 8, "Buenas prácticas"): archivos que NO se suben a GitHub.
+# Nota: en la guía los comentarios van al final de cada línea, pero Git solo
+# reconoce "#" al inicio de la línea; así escrito, node_modules SÍ se subiría.
+# Por eso aquí cada comentario va en su propia línea.
+
+# .gitignore — qué NO subir a GitHub
+# dependencias (se regeneran con npm install)
+node_modules/
+# build de produccion (lo genera Vercel)
+dist/
+# variables de entorno locales
+.env
+.env.*
+# la plantilla sí se sube (no tiene datos secretos)
+!.env.example
+*.log
+.DS_Store
